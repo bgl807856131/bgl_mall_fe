@@ -8,7 +8,3 @@
 
 require('../module.js');
 require('./index.css');
-
-var $$ = require('jquery');
-$$('body').html('HELLO INDEX HELLO HELLO weq');
-console.log('hello index');
