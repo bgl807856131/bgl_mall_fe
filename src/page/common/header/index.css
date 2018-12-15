@@ -1,0 +1,30 @@
+/**
+ * @Author buguoliang
+ * @Date 2018/12/12 23:10
+ */
+.header .logo{
+    position: absolute;
+    left: 60px;
+    top: 34px;
+    display: block;
+    font-size: 36px;
+    color: #0089FF;
+    font-weight: bold;
+}
+.header .search-con{
+    padding: 40px 0 30px 250px;
+}
+.header .search-con .search-input{
+    width: 550px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: 2px solid #0089FF;
+    outline: none;
+}
+.header .search-con .search-btn{
+    position: absolute;
+    width: 80px;
+    height: 44px;
+}

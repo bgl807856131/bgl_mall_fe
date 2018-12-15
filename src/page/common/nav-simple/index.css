@@ -1,0 +1,15 @@
+/**
+ * @Author buguoliang
+ * @Date 2018/12/10 00:32
+ */
+.nav-simple{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.nav-simple .logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #0089FF;
+}
