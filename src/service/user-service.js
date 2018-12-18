@@ -5,6 +5,16 @@
 var _bglMall = require('util/bglMall.js');
 
 var _user = {
+    //用户登录
+    login : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl() + '/user/login.do',
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({
