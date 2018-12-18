@@ -73,7 +73,5 @@ var page = {
 };
 
 $(function () {
-    console.log('3212312');
     page.init();
-    console.log('gasdfas');
 });
