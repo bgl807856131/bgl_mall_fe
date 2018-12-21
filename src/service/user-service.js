@@ -15,6 +15,29 @@ var _user = {
             error   : reject
         });
     },
+    //检查用户名是否可用
+    checkUsername : function (username, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl() + '/user/check_valid.do',
+            data    : {
+                type    : 'username',
+                str     : username
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    //注册提交
+    register : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl() + '/user/register.do',
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({
