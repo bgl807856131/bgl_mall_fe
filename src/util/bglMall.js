@@ -17,7 +17,7 @@ var bglMall = {
             data        : param.data    || '',
             success     : function (res) {
                 //请求成功
-                if("0" === res.status){
+                if(0 === res.status){
                     typeof param.success === "function" && param.success(res.data, res.msg);
                 }
                 //没有登录状态，需要强制登录

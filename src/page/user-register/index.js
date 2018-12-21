@@ -14,7 +14,6 @@ var formError = {
         $('.error-item').show().find('.err-msg').text(errMsg);
     },
     hide : function () {
-        console.log(13123);
         $('.error-item').hide().find('.err-msg').text('');
     }
 };
@@ -29,10 +28,8 @@ var page = {
         $('#username').blur(function () {
             var username = $.trim($(this).val());
             _user.checkUsername(username, function (res) {
-                console.log('success');
                 formError.hide();
             }, function (errMsg) {
-                console.log('failed');
                 formError.show(errMsg);
             });
         });

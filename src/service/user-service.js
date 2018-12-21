@@ -8,7 +8,7 @@ var _user = {
     //用户登录
     login : function (userInfo, resolve, reject) {
         _bglMall.request({
-            url     : _bglMall.getServerUrl() + '/user/login.do',
+            url     : _bglMall.getServerUrl('/user/login.do'),
             data    : userInfo,
             method  : 'POST',
             success : resolve,
@@ -18,7 +18,7 @@ var _user = {
     //检查用户名是否可用
     checkUsername : function (username, resolve, reject) {
         _bglMall.request({
-            url     : _bglMall.getServerUrl() + '/user/check_valid.do',
+            url     : _bglMall.getServerUrl('/user/check_valid.do'),
             data    : {
                 type    : 'username',
                 str     : username
@@ -31,7 +31,7 @@ var _user = {
     //注册提交
     register : function (userInfo, resolve, reject) {
         _bglMall.request({
-            url     : _bglMall.getServerUrl() + '/user/register.do',
+            url     : _bglMall.getServerUrl('/user/register.do'),
             data    : userInfo,
             method  : 'POST',
             success : resolve,
@@ -41,7 +41,7 @@ var _user = {
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({
-            url     : _bglMall.getServerUrl() + '/user/logout.do',
+            url     : _bglMall.getServerUrl('/user/logout.do'),
             method  : 'POST',
             success : resolve,
             error   : reject
@@ -49,7 +49,7 @@ var _user = {
     },
     checkLogin : function (resolve, reject) {
         _bglMall.request({
-            url     : _bglMall.getServerUrl() + '/user/get_user_info.do',
+            url     : _bglMall.getServerUrl('/user/get_user_info.do'),
             method  : 'POST',
             success : resolve,
             error   : reject
