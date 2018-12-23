@@ -27,6 +27,10 @@ var page = {
         //验证用户名是否可用
         $('#username').blur(function () {
             var username = $.trim($(this).val());
+            if (!username) {
+                return;
+            }
+            //异步验证username
             _user.checkUsername(username, function (res) {
                 formError.hide();
             }, function (errMsg) {
@@ -57,7 +61,7 @@ var page = {
             validateResult = this.formValidate(formData);
         if (validateResult.status) {
             _user.register(formData, function (res) {
-                window.location.href = './register.html?type=register';
+                window.location.href = './result.html?type=register';
             }, function (errMsg) {
                 formError.show(errMsg);
             });

@@ -38,6 +38,36 @@ var _user = {
             error   : reject
         });
     },
+    //获取提示问题
+    getQuestion : function (username, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/user/forget_get_question.do'),
+            data    : {
+                username : username
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    checkAnswer : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/user/forget_check_answer.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    resetPassword : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/user/forget_reset_password.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({

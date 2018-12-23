@@ -21,10 +21,10 @@ var nav = {
         });
         //注册
         $('.js-register').click(function () {
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         //退出
-        $('js-logout').click(function () {
+        $('.js-logout').click(function () {
             _user.logout(function (res) {
                 window.location.reload();
             }, function (errMsg) {
