@@ -17,6 +17,7 @@ var getHtmlConfig = function(name, title) {
     return {
         template    : './src/view/' + name + '.html',
         filename    : 'view/' + name + '.html',
+        favicon     : './favicon.ico',
         title       : title,
         inject      : true,
         hash        : true,
@@ -36,9 +37,9 @@ var config = {
         'result'            : ['./src/page/result/index.js']
     },
     output : {
-        path : './dist',
-        publicPath : '/dist',
-        filename : 'js/[name].js'
+        path        : __dirname + '/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : 's.bglmall.top/bgl_mall_fe/dist/',
+        filename    : 'js/[name].js'
     },
     externals : {
         'jquery' : 'window.jQuery'
