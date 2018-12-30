@@ -68,6 +68,14 @@ var _user = {
             error   : reject
         });
     },
+    getUserInfo : function (resolve, reject) {
+        _bglMall.request({
+            url: _bglMall.getServerUrl('/user/get_information.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({
