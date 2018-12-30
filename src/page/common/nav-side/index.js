@@ -13,7 +13,7 @@ var navSide = {
             {name : 'user-center', desc : '个人中心', href: './user-center.html'},
             {name : 'order-list', desc : '我的订单', href: './order-list.html'},
             {name : 'pass-update', desc : '修改密码', href: './pass-update.html'},
-            {name : 'about', desc : '关于MMall', href: './about.html'}
+            {name : 'about', desc : '关于BGLMall', href: './about.html'}
         ]
     },
     init : function(option){
