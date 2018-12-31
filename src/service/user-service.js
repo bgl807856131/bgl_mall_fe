@@ -76,6 +76,24 @@ var _user = {
             error: reject
         });
     },
+    updateUserInfo : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/user/update_information.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    updatePassword : function (userInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/user/reset_password.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
     //登出
     logout : function (resolve, reject) {
         _bglMall.request({
