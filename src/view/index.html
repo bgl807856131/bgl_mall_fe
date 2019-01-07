@@ -2,14 +2,67 @@
 <html lang="en">
     <head>
         <%= require('html-loader!./layout/html-common.html') %>
-        <title>BGLMall电商平台</title>
+        <title><%= htmlWebpackPlugin.options.title%> - BGLMall电商平台</title>
     </head>
     <body>
         <%= require('html-loader!./layout/nav.html') %>
         <%= require('html-loader!./layout/header.html') %>
-        <div class="page-wrap w">
-            <%= require('html-loader!./layout/nav-side.html') %>
-            <div class="content with-nav"></div>
+        <div class="w">
+            <ul class="keywords-list">
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=NBA系列" target="_blank" class="link">NBA系列</a>
+                    <a href="./list.html?keyword=勇士" target="_blank" class="link">勇士</a>
+                    <a href="./list.html?keyword=湖人" target="_blank" class="link">湖人</a>
+                    <a href="./list.html?keyword=火箭" target="_blank" class="link">火箭</a>
+                    <a href="./list.html?keyword=马刺" target="_blank" class="link">马刺</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=球衣系列" target="_blank" class="link">球衣系列</a>
+                    <a href="./list.html?keyword=科比" target="_blank" class="link">科比</a>
+                    <a href="./list.html?keyword=乔丹" target="_blank" class="link">乔丹</a>
+                    <a href="./list.html?keyword=艾弗森" target="_blank" class="link">艾弗森</a>
+                    <a href="./list.html?keyword=韦德" target="_blank" class="link">韦德</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=电脑" target="_blank" class="link">电脑</a>
+                    <a href="./list.html?keyword=办公配件" target="_blank" class="link">办公配件</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=手机" target="_blank" class="link">手机</a>
+                    <a href="./list.html?keyword=数码" target="_blank" class="link">数码</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=家具" target="_blank" class="link">家具</a>
+                    <a href="./list.html?keyword=家装" target="_blank" class="link">家装</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=个护化妆" target="_blank" class="link">个护化妆</a>
+                    <a href="./list.html?keyword=清洁用品" target="_blank" class="link">清洁用品</a>
+                    <a href="./list.html?keyword=纸品" target="_blank" class="link">纸品</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=母婴用品" target="_blank" class="link">母婴用品</a>
+                    <a href="./list.html?keyword=儿童玩具" target="_blank" class="link">儿童玩具</a>
+                    <a href="./list.html?keyword=童鞋童装" target="_blank" class="link">童鞋童装</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=图书" target="_blank" class="link">图书</a>
+                    <a href="./list.html?keyword=音像" target="_blank" class="link">音像</a>
+                    <a href="./list.html?keyword=电子书" target="_blank" class="link">电子书</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=儿童玩具" target="_blank" class="link">厨卫家电</a>
+                    <a href="./list.html?keyword=童鞋童装" target="_blank" class="link">小家电</a>
+                </li>
+                <li class="keywords-item">
+                    <a href="./list.html?keyword=鞋靴" target="_blank" class="link">鞋靴</a>
+                    <a href="./list.html?keyword=箱包" target="_blank" class="link">箱包</a>
+                    <a href="./list.html?keyword=珠宝" target="_blank" class="link">珠宝</a>
+                </li>
+            </ul>
+            <div class="banner-con">
+                <div class="loading"></div>
+            </div>
         </div>
         <%= require('html-loader!./layout/footer.html') %>
     </body>

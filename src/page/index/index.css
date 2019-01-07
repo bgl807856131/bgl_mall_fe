@@ -4,3 +4,37 @@
 * @Last Modified by:   buguoliang
 * @Last Modified time: 2018-12-06 01:04:46
 */
+.keywords-list{
+    float: left;
+    width: 240px;
+    height: 350px;
+    padding: 10px 0;
+    margin-right: 10px;
+    background: #777;
+    color: #fff;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+.keywords-list .keywords-item:hover {
+    background: #999;
+}
+.keywords-list .keywords-item .link{
+    color: #fff;
+    margin-right: 6px;
+}
+.keywords-list .keywords-item .link:hover{
+    color: #0089FF;
+}
+.banner-con{
+    width: 830px;
+    float: left;
+    height: 370px;
+    background: #eee;
+}
+.banner-con .loading{
+    margin-top: 150px;
+}
