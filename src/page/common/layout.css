@@ -59,7 +59,7 @@ input[type='checkbox']{
     text-decoration: none;
 }
 .link:hover{
-    color: #0089FF;
+    color: #337ab7;
 }
 .link-text{
     color: #999;
@@ -73,7 +73,7 @@ input[type='checkbox']{
     line-height: 40px;
     vertical-align: middle;
     border: none;
-    background: #0089FF;
+    background: #337ab7;
     font-size: 17px;
     font-weight: bold;
     color: #fff;

@@ -8,7 +8,7 @@
     top: 34px;
     display: block;
     font-size: 36px;
-    color: #0089FF;
+    color: #337ab7;
     font-weight: bold;
     text-decoration: none;
 }
@@ -21,7 +21,7 @@
     line-height: 40px;
     padding-left: 10px;
     font-size: 15px;
-    border: 2px solid #0089FF;
+    border: 2px solid #337ab7;
     outline: none;
 }
 .header .search-con .search-btn{
@@ -36,5 +36,5 @@
     background: #eee;
     color: #888;
     font-size: 14px;
-    border-top: 2px solid #0089FF;
+    border-top: 2px solid #337ab7;
 }

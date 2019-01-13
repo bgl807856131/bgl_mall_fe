@@ -4,8 +4,8 @@
  */
 require('./index.css');
 var _bglMall = require('util/bglMall.js');
-var _user = require('service/user-service.js');
-var _cart = require('service/cart-service.js');
+var _user    = require('service/user-service.js');
+var _cart    = require('service/cart-service.js');
 
 var nav = {
     init : function () {

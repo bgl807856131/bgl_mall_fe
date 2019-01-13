@@ -9,7 +9,7 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _navSide      = require('page/common/nav-side/index.js');
 var _bglMall      = require('util/bglMall.js');
-var _user = require('service/user-service.js');
+var _user         = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 var page = {

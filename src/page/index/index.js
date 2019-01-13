@@ -9,11 +9,20 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+require('util/slider/index.js');
 
-var _navSide = require('page/common/nav-side/index.js');
-// var _bglMall = require('util/bglMall.js');
+var templateBanner  = require('./banner.string');
+var _bglMall        = require('util/bglMall.js');
 
 
-_navSide.init({
-    name : 'user-center'
+$(function() {
+    var bannerHtml = _bglMall.renderHtml(templateBanner);
+    $('.banner-con').html(bannerHtml);
+    var $slider = $('.banner').unslider({
+        dots: true
+    });
+    $('.banner-con .banner-arrow').click(function () {
+        var forward = $(this).hasClass('prev') ? 'prev' : 'next';
+        $slider.data('unslider')[forward]();
+    });
 });

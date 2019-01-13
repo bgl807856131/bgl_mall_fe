@@ -7,7 +7,7 @@
 require('./index.css');
 require('page/common/nav-simple/index.css');
 var _bglMall = require('util/bglMall.js');
-var _user = require('service/user-service.js');
+var _user    = require('service/user-service.js');
 
 var formError = {
     show : function (errMsg) {

@@ -8,6 +8,7 @@ var _bglMall = require('util/bglMall.js');
 var header = {
     init : function () {
         this.bindEvent();
+        this.onLoad();
     },
     onLoad : function () {
         var keyword = _bglMall.getUrlParam('keyword');
