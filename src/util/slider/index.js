@@ -4,4 +4,4 @@
  */
 
 require('./index.css');
-require('./unslider');
+require('./unslider.js');

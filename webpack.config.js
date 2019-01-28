@@ -97,8 +97,8 @@ var config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://www.bglmall.top',
-                // target: 'http://test.happymmall.com',
+                // target: 'http://www.bglmall.top',
+                target: 'http://test.happymmall.com',
                 changeOrigin : true
             }
         }
