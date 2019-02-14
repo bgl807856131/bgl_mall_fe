@@ -29,7 +29,7 @@ var config = {
     entry : {
         'common'            : ['./src/page/common/index.js'],
         'index'             : ['./src/page/index/index.js'],
-        'list'             : ['./src/page/list/index.js'],
+        'list'              : ['./src/page/list/index.js'],
         'user-login'        : ['./src/page/user-login/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
@@ -41,8 +41,8 @@ var config = {
     },
     output : {
         path        : __dirname + '/dist/',
-        // publicPath  : '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
+        publicPath  : '/dist/',
+        // publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {

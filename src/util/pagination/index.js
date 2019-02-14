@@ -7,12 +7,21 @@ var templatePage    = require('./index.string');
 var _bglMall        = require('util/bglMall.js');
 
 var Pagination = function () {
+    var _this = this;
     this.defaultOption = {
         container       : null,
         pageNum         : 1,
         pageRange       : 3,
         onSelectPage    : null
     };
+    // 事件处理
+    $(document).on('click', '.pg-item', function () {
+        var $this = $(this);
+        if ($this.hasClass('active') || $this.hasClass('disabled')) {
+            return;
+        }
+        typeof _this.option.onSelectPage === 'function' ? _this.option.onSelectPage($this.data('value')) : null;
+    })
 };
 // 渲染分页组件
 Pagination.prototype.render = function (userOption) {
@@ -23,9 +32,9 @@ Pagination.prototype.render = function (userOption) {
         return;
     }
     //判断是否只有1页
-    // if (!this.option.pages <= 1) {
-    //     return;
-    // }
+    if (this.option.pages <= 1) {
+        return;
+    }
     this.option.container.html(this.getPaginationHtml());
 };
 //获取分页的html
