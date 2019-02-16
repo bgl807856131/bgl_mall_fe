@@ -9,6 +9,7 @@ var _cart = {
     getCartCount : function(resolve, reject){
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/get_cart_product_count.do'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -18,6 +19,7 @@ var _cart = {
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/add.do'),
             data    : productInfo,
+            method  : 'POST',
             success : resolve,
             error   : reject
         });

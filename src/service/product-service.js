@@ -10,7 +10,7 @@ var _product = {
         _bglMall.request({
             url     : _bglMall.getServerUrl('/product/list.do'),
             data    : listParam,
-            // method  : 'POST',
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -22,7 +22,7 @@ var _product = {
             data    : {
                 productId : productId
             },
-            // method  : 'POST',
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
