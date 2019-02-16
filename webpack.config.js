@@ -42,8 +42,8 @@ var config = {
     },
     output : {
         path        : __dirname + '/dist/',
-        publicPath  : '/dist/',
-        // publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
+        // publicPath  : '/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
