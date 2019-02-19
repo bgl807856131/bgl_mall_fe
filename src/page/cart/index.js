@@ -3,8 +3,8 @@
  * @Date 2019/02/18 21:48
  */
 require('./index.css');
-require('page/common/nav/index.js');
 require('page/common/header/index.js');
+var nav           = require('page/common/nav/index.js');
 var _bglMall      = require('util/bglMall.js');
 var _cart         = require('service/cart-service.js');
 var templateIndex = require('./index.string');
@@ -101,6 +101,29 @@ var page = {
                 _this.deleteCartProduct(productId);
             }
         });
+        //删除选中
+        $(document).on('click', '.delete-selected', function () {
+            if (window.confirm('确定要删除选中的商品？')) {
+                var arrProductIds = [],
+                    $selected = $('.cart-select:checked');
+                for (var i = 0, iLength = $selected.length; i < iLength; i++) {
+                    arrProductIds.push($($selected[i]).parents('.cart-table').data('product-id'));
+                }
+                if (arrProductIds.length) {
+                    _this.deleteCartProduct(arrProductIds.join(','));
+                } else {
+                    _bglMall.errorTips('您还没有选中要删除的商品');
+                }
+            }
+        });
+        //删除选中
+        $(document).on('click', '.btn-submit', function () {
+            if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
+                window.location.href = './confirm.html';
+            } else {
+                _bglMall.errorTips('亲，请选择商品后再进行结算');
+            }
+        });
     },
     //加载商品详情数据
     loadCart : function () {
@@ -117,6 +140,8 @@ var page = {
         this.data.cartInfo = data;
         var cartHtml = _bglMall.renderHtml(templateIndex, data);
         $('.page-wrap').html(cartHtml);
+        // 通知导航的购物车更新数量
+        nav.loadCartCount();
     },
     deleteCartProduct : function (productIds) {
         var _this = this;

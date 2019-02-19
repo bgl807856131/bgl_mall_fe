@@ -70,10 +70,10 @@
         </label>
     </div>
     <div class="delete-con">
-                    <span class="link">
-                        <i class="fa fa-trash-o"></i>
-                        <span>删除选中</span>
-                    </span>
+        <span class="link delete-selected">
+            <i class="fa fa-trash-o"></i>
+            <span>删除选中</span>
+        </span>
     </div>
     <div class="submit-con">
         <span>总价:</span>
