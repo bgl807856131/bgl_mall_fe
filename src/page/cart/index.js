@@ -119,7 +119,7 @@ var page = {
         //删除选中
         $(document).on('click', '.btn-submit', function () {
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             } else {
                 _bglMall.errorTips('亲，请选择商品后再进行结算');
             }
