@@ -87,6 +87,7 @@ var page = {
     //加载地址列表数据
     loadAddressList : function () {
         var _this = this;
+        $('.address-con').html('<div class="loading"></div>');
         _address.getAddressList(function (res) {
             _this.addressFilter(res);
             var addressListHtml = _bglMall.renderHtml(templateAddress, res);
@@ -95,16 +96,17 @@ var page = {
             $('.address-con').html('<p class="err-tip">地址加载失败，请刷新后重试</p>');
         });
     },
+    // 处理地址列表中选中状态
     addressFilter : function (data) {
         if (this.data.selectedAddressId) {
             var selectedAddressIdFlag = false;
             for (var i = 0, iLength = data.list.length; i < iLength; i++) {
-                if (data.list[i] === this.data.selectedAddressId) {
+                if (data.list[i].id === this.data.selectedAddressId) {
                     data.list[i].isActive = true;
                     selectedAddressIdFlag = true;
                 }
             }
-            //如果以前选中的地址不在地址列表里，将其删除
+            // 如果以前选中的地址不在列表里，将其删除
             if (!selectedAddressIdFlag) {
                 this.data.selectedAddressId = null;
             }
@@ -112,6 +114,7 @@ var page = {
     },
     //加载商品列表数据
     loadProductList : function () {
+        $('.product-con').html('<div class="loading"></div>');
         _order.getProductList(function (res) {
             var productListHtml = _bglMall.renderHtml(templateProduct, res);
             $('.product-con').html(productListHtml);

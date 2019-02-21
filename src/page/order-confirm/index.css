@@ -154,7 +154,7 @@
 .form .form-line .label{
     display: block;
     float: left;
-    width: 80px;
+    width: 85px;
     text-align: right;
     height: 30px;
     line-height: 30px;
@@ -176,7 +176,7 @@
     width: 250px;
 }
 .form .form-line .address-btn{
-    margin-left: 90px;
+    margin-left: 95px;
     height: 30px;
     line-height: 30px;
     font-size: 13px;

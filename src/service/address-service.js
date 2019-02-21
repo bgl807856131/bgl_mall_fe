@@ -16,6 +16,46 @@ var _address = {
             success : resolve,
             error   : reject
         });
+    },
+    save : function (addressInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/shipping/add.do'),
+            data    : addressInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    update : function (addressInfo, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/shipping/update.do'),
+            data    : addressInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    deleteAddress : function (shippingId, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/shipping/del.do'),
+            data    : {
+                shippingId : shippingId
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    getAddress : function (shippingId, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/shipping/select.do'),
+            data    : {
+                shippingId  : shippingId
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
     }
 }
 
