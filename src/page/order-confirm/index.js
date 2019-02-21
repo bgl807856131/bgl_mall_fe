@@ -10,6 +10,7 @@ var _order          = require('service/order-service.js');
 var _address        = require('service/address-service.js');
 var templateAddress = require('./address-list.string');
 var templateProduct = require('./product-list.string');
+var addressModal    = require('./address-modal.js');
 
 var page = {
     data : {
@@ -45,15 +46,69 @@ var page = {
                 _bglMall.errorTips('请选择地址后再提交');
             }
         });
+        //地址的添加
+        $(document).on('click', '.address-add', function () {
+            addressModal.show({
+                isUpdate    : false,
+                onSuccess   : function () {
+                    _this.loadAddressList();
+                }
+            });
+        });
+        //地址的编辑
+        $(document).on('click', '.address-update', function (e) {
+            e.stopPropagation();
+            var shippingId = $(this).parents('.address-item').data('id');
+            _address.getAddress(shippingId, function (res) {
+                addressModal.show({
+                    isUpdate    : true,
+                    data        : res,
+                    onSuccess   : function () {
+                        _this.loadAddressList();
+                    }
+                });
+            }, function (errMsg) {
+                _bglMall.errorTips(errMsg);
+            });
+        });
+        //地址的删除
+        $(document).on('click', '.address-delete', function (e) {
+            e.stopPropagation();
+            var id = $(this).parents('.address-item').data('id');
+            if (window.confirm('确定要删除该地址？')) {
+                _address.deleteAddress(id, function (res) {
+                    _this.loadAddressList();
+                }, function (errMsg) {
+                    _bglMall.errorTips(errMsg);
+                })
+            }
+        });
     },
     //加载地址列表数据
     loadAddressList : function () {
+        var _this = this;
         _address.getAddressList(function (res) {
+            _this.addressFilter(res);
             var addressListHtml = _bglMall.renderHtml(templateAddress, res);
             $('.address-con').html(addressListHtml);
         }, function (errMsg) {
             $('.address-con').html('<p class="err-tip">地址加载失败，请刷新后重试</p>');
         });
+    },
+    addressFilter : function (data) {
+        if (this.data.selectedAddressId) {
+            var selectedAddressIdFlag = false;
+            for (var i = 0, iLength = data.list.length; i < iLength; i++) {
+                if (data.list[i] === this.data.selectedAddressId) {
+                    data.list[i].isActive = true;
+                    selectedAddressIdFlag = true;
+                }
+            }
+            //如果以前选中的地址不在地址列表里，将其删除
+            if (!selectedAddressIdFlag) {
+                this.data.selectedAddressId = null;
+            }
+        }
     },
     //加载商品列表数据
     loadProductList : function () {
