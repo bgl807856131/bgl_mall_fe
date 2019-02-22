@@ -22,6 +22,37 @@ var _order = {
             success : resolve,
             error   : reject
         });
+    },
+    getOrderList : function (listParam, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/order/list.do'),
+            data    : listParam,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    getOrderDetail : function (orderNumber, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/order/detail.do'),
+            data    : {
+                orderNo : orderNumber
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    cancelOrder : function (orderNumber, resolve, reject) {
+        _bglMall.request({
+            url     : _bglMall.getServerUrl('/order/cancel.do'),
+            data    : {
+                orderNo : orderNumber
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
     }
 }
 
