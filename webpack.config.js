@@ -47,8 +47,8 @@ var config = {
     },
     output : {
         path        : __dirname + '/dist/',
-        publicPath  : '/dist/',
-        // publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
+        // publicPath  : '/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.bglmall.top/bgl_mall_fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -109,8 +109,7 @@ var config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                // target: 'http://www.bglmall.top',
-                target: 'http://test.happymmall.com',
+                target: 'http://www.bglmall.top',
                 changeOrigin : true
             }
         }

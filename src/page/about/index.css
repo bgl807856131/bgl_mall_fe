@@ -1,0 +1,21 @@
+/**
+ * @Author buguoliang
+ * @Date 2019/02/23 22:09
+ */
+.panel .panel-body p{
+    border-bottom: 1px solid #ddd;
+}
+.panel .panel-body .text-line{
+    padding: 5px 0;
+    background: #eee;
+    height: 40px;
+    line-height: 40px;
+    color: #337ab7;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+.panel .panel-body .text-detail{
+    padding: 15px 0;
+    font-size: 14px;
+}
