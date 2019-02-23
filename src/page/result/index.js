@@ -10,5 +10,10 @@ var _bglMall = require('util/bglMall.js');
 $(function () {
     var type = _bglMall.getUrlParam('type') || 'default',
         $element = $('.' + type + '-success');
+    if (type === 'payment') {
+        var orderNumber = _bglMall.getUrlParam('orderNumber'),
+            $orderNumber = $element.find('.order-number');
+        $orderNumber.attr('href', $orderNumber.attr('href') + orderNumber);
+    }
     $element.show();
 })
