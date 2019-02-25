@@ -64,13 +64,17 @@ var addressModal = {
             var isUpdate     = _this.option.isUpdate;
             // 使用新地址且验证 通过
             if (!isUpdate && receiverInfo.status) {
+                console.log('1234');
                 _address.save(receiverInfo.data, function (res) {
+                    console.log('1234567');
                     _bglMall.successTips('地址添加成功');
                     _this.hide();
                     typeof _this.option.onSuccess === 'function' && _this.option.onSuccess(res);
                 }, function (errMsg) {
                     _bglMall.errorTips(errMsg);
+                    console.log('123456789');
                 });
+                console.log('222334');
             }
             //更新地址且验证通过
             else if (isUpdate && receiverInfo.status) {

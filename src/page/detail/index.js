@@ -45,6 +45,17 @@ var page = {
                 $pCount.val(currCount > minCount ? currCount - 1 : minCount);
             }
         });
+        //立即购买
+        $(document).on('click', '.go-buy', function () {
+            _cart.addToCart({
+                productId : _this.data.productId,
+                count     : $('.p-count').val()
+            }, function (res) {
+                window.location.href = './order-confirm.html';
+            }, function (errMsg) {
+                _bglMall.errorTips(errMsg);
+            });
+        });
         //加入购物车
         $(document).on('click', '.cart-add', function () {
             _cart.addToCart({

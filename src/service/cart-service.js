@@ -28,6 +28,7 @@ var _cart = {
     getCartList : function(resolve, reject){
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/list.do'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -39,6 +40,7 @@ var _cart = {
             data    : {
                 productId : productId
             },
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -50,6 +52,7 @@ var _cart = {
             data    : {
                 productId : productId
             },
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -58,6 +61,7 @@ var _cart = {
     selectAllProduct : function(resolve, reject){
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/select_all.do'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -66,6 +70,7 @@ var _cart = {
     unselectAllProduct : function(resolve, reject){
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/un_select_all.do'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -75,6 +80,7 @@ var _cart = {
         _bglMall.request({
             url     : _bglMall.getServerUrl('/cart/update.do'),
             data    : productInfo,
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -86,6 +92,7 @@ var _cart = {
             data    : {
                 productIds : productIds
             },
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
