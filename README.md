@@ -1,37 +1,28 @@
 # bgl_mall_fe
 
 #### 项目介绍
-mall电商前端代码
+BGLMall电商前端代码
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+#### 软件架构说明
+CommonJS、Webpack、Html、CSS、JQuery、React、hogan等
 
 
-#### 码云特技
+#### 项目初始化步骤
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.安装nodejs环境,推荐使用v6.12.3 下载地址 : https://nodejs.org/download/release/v6.12.3/
+
+2.全局安装webpack v2.x 命令: (sudo) npm install -g webpack
+
+3.全局安装webpack-dev-server 命令: (sudo) npm install -g webpack-dev-server
+
+4.在项目根目录执行npm初始化 命令: npm install --registry=https://registry.npm.taobao.org
+
+5.启动项目 开发模式: npm run dev (windows系统上为npm run dev_win) 生产模式: npm run dist (windows系统上为npm run dist_win)
+
+6.开发模式下预览项目 访问：http://localhost:8086/dist/view/index.html
+
+注意： 1.后台管理系统使用了sass, 需要安装ruby和sass
+
+2.后端接口也要使用代理，http://localhost:8086/manage/* --> http://admin.bglmall.top/manage/
+
+3.后台管理系统的预览账号：admin 123456
